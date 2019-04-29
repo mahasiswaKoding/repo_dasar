@@ -1,3 +1,5 @@
+<?php include "config/helper.php"; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,19 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- judul singkat dari halaman web -->
-    <title>Repos Dasar</title>
+    <title><?= $judul_singkat ?></title>
 
     <!-- disini akan ada link untuk sumber code lain -->
 
 </head>
 
 <body>
-    <h1>Judul Halaman Utama</h1>
+    <h1><?= $judul_website ?></h1>
     <!-- akhir dari bagian header -->
 
     <!-- awal dari bagian navbar -->
     <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="<?= base_url() ?>">Home</a></li>
         <li><a href="#">Link 1</a></li>
         <li><a href="#">Link 2</a></li>
         <li><a href="#">Link 3</a></li>
@@ -32,7 +34,7 @@
 
     <!-- awal dari bagian footer -->
     <div>
-        <p>Copyright &copy; Mohamad Albie 2019</p>
+        <p>Copyright &copy; <?= $nama . " . " . (isset($perusahaan) ? $perusahaan : NULL) ?> 2019</p>
     </div>
 </body>
 
